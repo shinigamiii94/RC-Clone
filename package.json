@@ -24,9 +24,10 @@
 		"docker:run": "docker compose up --detach",
 		"docker:stop": "docker-compose down --volumes",
 		"devtest": "npm run docker:stop && npm run docker:run && npm run dev",
-		"buildDB": "node \"./server/db/seed.js\""
-		
-
+		"buildDB": "node \"./server/db/seed.js\"",
+		"prestart": "npm run migration -- up",
+		"migration": "node-pg-migrate",
+		"teststart": "npm start && npm buildDB"
 	},
 	"repository": {
 		"type": "git",
@@ -84,6 +85,7 @@
 		"express": "^4.18.2",
 		"helmet": "^7.0.0",
 		"morgan": "^1.10.0",
+		"node-pg-migrate": "^6.2.2",
 		"pg": "^8.11.1",
 		"react-bootstrap": "^2.8.0",
 		"winston": "^3.10.0"
