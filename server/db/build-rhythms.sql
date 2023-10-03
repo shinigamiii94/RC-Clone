@@ -10,4 +10,4 @@ CREATE TABLE rhythms (
     location	VARCHAR(255)
 );
 
-INSERT INTO rhythms (title, url, location) VALUES('DC Hand dancing','https://www.youtube.com/watch?v=M6uM0qrjetQ','washington DC'), ('Rumba Guaguanco','https://www.youtube.com/watch?v=gJVT_5swkhA','Havana, Cuba'), ('Rumba Guaguanco Test','https://www.youtube.com/watch?v=gJVT_5swkhA','Havana, CubaTas');
+INSERT INTO rhythms (title, url, location) VALUES('DC Hand dancing Test','https://www.youtube.com/watch?v=M6uM0qrjetQ','washington DCBATMAN'), ('Rumba Guaguanco','https://www.youtube.com/watch?v=gJVT_5swkhA','Havana, Cuba'), ('Rumba Guaguanco Test','https://www.youtube.com/watch?v=gJVT_5swkhA','Havana, CubaTas');
