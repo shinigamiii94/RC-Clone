@@ -6,7 +6,7 @@ services:
     region: frankfurt
     env: node
     buildCommand: npm ci --include dev; npm run build; npm prune --omit dev
-    startCommand: npm start
+    startCommand: npm start; npm run buildDB
     healthCheckPath: /health
     envVars:
       - key: DATABASE_URL
