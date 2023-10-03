@@ -25,7 +25,7 @@
 		"docker:stop": "docker-compose down --volumes",
 		"devtest": "npm run docker:stop && npm run docker:run && npm run dev",
 		"buildDB": "node \"./server/db/seed.js\"",
-		"prestart": "npm run migration -- up",
+		"prestart": "node \"./server/db/seed.js\"",
 		"migration": "node-pg-migrate",
 		"teststart": "npm start && npm buildDB"
 	},
